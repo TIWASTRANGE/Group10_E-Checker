@@ -25,13 +25,38 @@ In the output, you'll find options to open the app in a
 
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### FrontEnd Architecture
+SmartCheckApp/
+│
+├── app/
+│   ├── assets/                # Images, fonts, icons
+│   ├── components/           # Reusable UI components (e.g., Button, Card, InputField)
+│   ├── navigation/           # Navigation stack, tabs, route config
+│   │   └── AppNavigator.js
+│   ├── screens/              # Feature-based screens
+│   │   ├── Auth/
+│   │   │   ├── LoginScreen.js
+│   │   │   └── RegisterScreen.js
+│   │   ├── Outage/
+│   │   │   ├── ReportOutage.js
+│   │   │   └── OutageStatus.js
+│   │   ├── Meter/
+│   │   │   └── MeterReading.js
+│   │   ├── Billing/
+│   │   │   └── BillingDetails.js
+│   │   └── Notifications/
+│   │       └── Notification.js
+│   ├── services/             # API calls and integrations (Axios instance, API calls)
+│   │   └── api.js
+│   ├── store/                # Redux or Context API (state management)
+│   │   ├── actions/
+│   │   ├── reducers/
+│   │   └── store.js
+│   ├── utils/                # Helper functions (validators, formatters, etc.)
+│   └── config/               # App config (environment variables, base URLs)
+│
+├── .env                      # Environment variables (API keys, URLs)
+├── App.js                    # App entry point
+├── package.json              # Project dependencies and scripts
+└── README.md                 # Project overview and setup guide
 
