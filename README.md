@@ -26,6 +26,7 @@ In the output, you'll find options to open the app in a
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
 ### FrontEnd Architecture
+```bash
 SmartCheckApp/
 │
 ├── app/
@@ -59,4 +60,4 @@ SmartCheckApp/
 ├── App.js                    # App entry point
 ├── package.json              # Project dependencies and scripts
 └── README.md                 # Project overview and setup guide
-
+```
